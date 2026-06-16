@@ -1,0 +1,64 @@
+/* Variabel Warna Alam Waropen */
+:root {
+    --primary-color: #0f4c3a;     /* Hijau Mangrove Tua */
+    --secondary-color: #1b8a5a;   /* Hijau Daun Segar */
+    --accent-color: #ffc107;      /* Kuning Emas */
+    --dark-blue: #0A2540;         /* Biru Deep Gelap */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8faf9;
+    color: #2d3748;
+}
+
+/* Memperbaiki & Menghidupkan Navbar */
+.navbar {
+    background-color: var(--primary-color) !important;
+    border-bottom: 4px solid var(--accent-color);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+/* Memaksa link navbar berwarna putih, bukan biru bawaan */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Dropdown Menu styling */
+.dropdown-menu {
+    border-top: 3px solid var(--secondary-color) !important;
+}
+
+.dropdown-item:hover {
+    background-color: #eef7f4;
+    color: var(--primary-color);
+}
+
+/* Jarak konten utama dari navbar biar tidak tertutup */
+section {
+    position: relative;
+}
+.hero-section {
+    height: 85vh; /* Mengatur tinggi background agar pas di layar */
+    
+    /* Memanggil gambar dari folder assets/images/ */
+    background: linear-gradient(rgba(15, 76, 58, 0.75), rgba(10, 37, 64, 0.85)), 
+                url('../images/background-home.jpg') no-repeat center center;
+                
+    background-size: cover; /* Memaksa gambar mengisi seluruh area secara proporsional */
+    background-attachment: scroll; /* Mengikuti gerakan scroll dengan rapi */
+    display: flex;
+    align-items: center;
+    color: white;
+}
